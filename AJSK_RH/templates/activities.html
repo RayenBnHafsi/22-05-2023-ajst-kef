@@ -1,0 +1,74 @@
+{% load static %}
+
+
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>    
+    <link rel="stylesheet" href="{% static 'css/act.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/LOGO AJST KEF (2).pdf.png' %}">
+</head>
+<body>
+    
+
+    <div class="wrapper">
+        
+        <div class="gallery">
+            <div class="gallery__item gallery__item--1">
+                <a href="{% url 'ajst.post' %}" class="gallery__link">
+                    <img src="https://media.istockphoto.com/id/1183803820/photo/group-of-school-children-with-teacher-on-field-trip-in-nature-learning-science.jpg?s=2048x2048&w=is&k=20&c=3fw35v-2MTrlS0G4TUO2peSUyFC2rxzWmf7dyZK8mMs=" class="gallery__image" />
+                    <div class="gallery__overlay">
+                        <span>Les Camps scientifiques</span>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery__item gallery__item--2">
+                <a href="{% url 'ajst.post' %}" class="gallery__link">
+                    <img src="https://media.istockphoto.com/id/1366724877/photo/rear-view-of-mature-teacher-talking-to-his-student-during-lecture-at-university-classroom.jpg?s=1024x1024&w=is&k=20&c=bPZteQZDvN2TVg_VlhnzXaw60_WxvDB7yVW0Fw1T3-c=" class="gallery__image" />
+                    <div class="gallery__overlay">
+                        <span>les Stages de formation</span>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery__item gallery__item--3">
+                <a href="{% url 'ajst.post' %}" class="gallery__link">
+                    <img src="https://media.istockphoto.com/id/1160662861/photo/elementary-age-students-riding-school-bus.jpg?s=1024x1024&w=is&k=20&c=yH_9qbrarTDUPxMY15ONukB8BIBvsUZXISM78MscGwE=" class="gallery__image" />
+                    <div class="gallery__overlay">
+                        <span>Les sorties et les excursions</span>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery__item gallery__item--4">
+                <a href="{% url 'ajst.post' %}" class="gallery__link">
+                    <img src="https://media.istockphoto.com/id/1457150110/photo/co-workers-working-on-a-circuit-boards-in-office.jpg?s=1024x1024&w=is&k=20&c=B-gIt1maEWujet69icEsEN-pmsXoXG1N1hZRjZR9cc0=" class="gallery__image" />
+                    <div class="gallery__overlay">
+                        <span>les ateliers hebdomadaires</span>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery__item gallery__item--5">
+                <a href="{% url 'ajst.post' %}" class="gallery__link">
+                    <img src="https://media.istockphoto.com/id/1204162313/photo/party-people-enjoy-concert-at-festival-summer-music-festival.jpg?s=1024x1024&w=is&k=20&c=QyIKU3hT-rFBuOFexytmL5Q5SJU5qxjJCAF8fpHDSnM=" class="gallery__image" />
+                    <div class="gallery__overlay">
+                        <span>Les Evenements</span>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery__item gallery__item--6">
+                <a href="{% url 'ajst.post' %}" class="gallery__link">
+                    <img src="https://media.istockphoto.com/id/476806559/photo/audience-applauding-ballerina-on-stage-in-theater.jpg?s=1024x1024&w=is&k=20&c=mf00U-6yvBbAbpK_rC0fl8ho-PNernFf6wHqdbdJ89o=" class="gallery__image" />
+                    <div class="gallery__overlay">
+                        <span>Les Manifestations</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="particles-js"></div> 
+
+        <script src="js/particles.js"></script>
+        <script src="js/app.js"></script>
+    </div>
+</body>
+</html>

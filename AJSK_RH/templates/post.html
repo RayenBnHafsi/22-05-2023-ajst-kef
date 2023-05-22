@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJST Post</title>
+    <link rel="stylesheet" href="{% static 'css/posts.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/LOGO AJST KEF (2).pdf.png' %}">
+</head>
+<body>
+    <div id="particles-js"></div>
+    {% for post in posts %}
+        <div class="container">
+                <div class="post">
+                <div class="head">
+                    <div class="profile-detail">
+                        <div class="p-img">
+                            <img src="{% static 'img/LOGO_AJST_KEF.pdf.png' %}" alt="">
+                        </div>
+                        <div class="name">AJST KEF</div>
+                    </div>
+                </div>
+                
+                <div class="post-img">
+                    <img src="{{post.image.url}}" alt="">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="reactions head">
+                    <div class="react-links">
+                        <i id="heart" class="far fa-heart"></i>
+                    </div>
+                </div>
+                <div class="react-detail">
+                    <p>{{post.title}}</p>
+                </div>
+                <div class="caption">
+                    <div class="post-cap">
+                        {{post.content}}
+                    </div>
+                </div>
+                </div>
+            
+        </div>
+    {% endfor %}
+
+     
+    <script>
+        const heart = document.getElementById('heart');
+        const postImg = document.querySelector('.post-img');
+
+        postImg.addEventListener('dblclick', () =>{
+
+            heart.classList.replace('far','fas');
+            heart.style.color ='red';
+            document.querySelector('.react-detail').innerHTML ='2,407 likes';
+            postImg.classList.add('active');
+
+            setInterval(() => {
+                postImg.classList.remove('active');
+            }, 1000);
+        });
+
+        heart.addEventListener('click',handleHeart)
+
+        function handleHeart() {
+            var attr = heart.getAttributeNode("class").value;
+
+            if(attr == 'far fa-heart'){
+                heart.classList.replace('far','fas');
+                heart.style.color = 'red';
+                document.querySelector('.react-detail').innerHTML = '2,407 likes';
+            }
+            else if(attr == 'fas fa-heart'){
+                heart.classList.replace('fas','far');
+                heart.style.color = 'white';
+                document.querySelector('.react-detail').innerHTML = '2,406 likes';
+            }
+        }
+    </script>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
